@@ -259,7 +259,7 @@ const PVS={off:"",no:"",dt:"",purpose:"",comp:"",mon:"",mon2:"",payee:"",pdt:"",
 function dcx(r,h){const x=dc(r,h);x.forEach(c=>c[5]=c[4]);const o=PD[pdk(r,h)];if(o&&o.length==x.length)x.forEach((c,i)=>c[4]=+o[i]||0);vOvl(x,r,h);return x}
 function rstPD(){const r=RS();if(r.length==1)delete PD[pdk(r[0],+$("gr").value)];ssel()}
 const DDOV={},VDS={},VK=["vn","vt","va","bc","ac","gst","ifsc","mob"],VKX=["vn","va","bc","ac","gst","ifsc","mob"],VNF={g:"-1",m:"",v:"",s:"",d:""},DSS={},DF={m:"",g:"-1",s:"",d:""},VR=[],VF={o:"",p:"",f:"",t:"",n1:"",n2:"",v:"a",m:"",s:"",d:""};let PVL=[],PVM="",XV=[];
-const SKEY="snaSparsh2026v1_nosheet",SKIP=["ind","hm","hq","rc","ref","won","inn","hmn","vn","vt","va","bc","ac","gst","ifsc","mob"];
+const SKEY="snaSparsh2026v1_nosheet_b",SKIP=["ind","hm","hq","rc","ref","won","inn","hmn","vn","vt","va","bc","ac","gst","ifsc","mob"];
 function sv(){try{const f={};Object.keys(F).forEach(k=>{if(!SKIP.includes(k)&&$(k))f[k]=$(k).value});localStorage.setItem(SKEY,JSON.stringify({f,aq:AQ,pd:PD,pv:PVS,ds:DSS,vr:VR,vd:VDS,dv:DDOV,mx:$("mtx")?$("mtx").checked:false}))}catch(e){}try{bkUpd()}catch(e){}try{gsQueue()}catch(e){}}
 function ld(){try{const o=JSON.parse(localStorage.getItem(SKEY)||"null");if(!o)return;Object.keys(o.f||{}).forEach(k=>{if(!SKIP.includes(k)&&$(k))$(k).value=o.f[k]});if(o.aq)Object.assign(AQ,o.aq);if(o.pd)Object.assign(PD,o.pd);if(o.pv)Object.assign(PVS,o.pv);PVS.dt="";PVS.pdt="";if(o.ds)Object.assign(DSS,o.ds);if(o.vd)Object.assign(VDS,o.vd);if(o.dv)Object.assign(DDOV,o.dv);if($("mtx"))$("mtx").checked=!!o.mx;if(Array.isArray(o.vr))o.vr.forEach(x=>VR.push(x))}catch(e){}}
 function clr(){try{localStorage.removeItem(SKEY)}catch(e){}location.reload()}
